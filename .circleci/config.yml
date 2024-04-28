@@ -1,17 +1,13 @@
 version: 2.1
-
-
-jobs: 
- build:
+build-and-test:
   machine: 
    - image: ubuntu-2004:202104-01 
- test:
   steps: 
    - checkout  
    - run: make deps 
    - run: make test 
 workflows: 
   basic: 
-   jobs: 
-   - build-and-test
+    jobs: 
+      - build-and-test
    
