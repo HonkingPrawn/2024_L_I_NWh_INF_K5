@@ -6,8 +6,8 @@ jobs:
       docker_layer_caching: true
     steps:
       - checkout
-      - run: deps
-      - run: test
+      - run: make deps
+      - run: make test
 workflows:
   basic:
     jobs:
